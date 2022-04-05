@@ -2,20 +2,15 @@ from src.Figure import Figure
 
 
 class Circle(Figure):
+    name = 'Circle'
+
     def __init__(self, radius):
-        self.name = 'Circle'
         self.radius = radius
-        self.__perimeter = 2 * 3.14 * radius
-        self.__area = 3.14 * radius ** 2
 
     @property
     def perimeter(self):
-        return self.perimeter
+        return 2 * 3.14 * self.radius
 
     @property
     def area(self):
-        return self.area
-
-
-c = Circle(1)
-print(c.area())
+        return 3.14 * self.radius ** 2

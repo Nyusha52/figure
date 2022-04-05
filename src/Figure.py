@@ -1,4 +1,5 @@
 class Figure:
+    area = None
 
     def add_area(self, figure):
         if isinstance(figure, Figure):
