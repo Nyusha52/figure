@@ -64,3 +64,14 @@ class TestCircle:
         c = Circle(2)
         r = Triangle(3, 3, 2)
         assert c.add_area(r) == 15.39
+
+    def test_add_area_circle_str(self):
+        c = Circle(21)
+        r = "f"
+        assert c.add_area(r) is None
+
+    def test_add_area_circle_int(self):
+        c = Circle(21)
+        r = 1
+        assert c.add_area(r) is None
+

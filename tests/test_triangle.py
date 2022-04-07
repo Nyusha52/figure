@@ -88,7 +88,17 @@ class TestTriangle:
         r = Square(5)
         assert c.add_area(r) == 197.39
 
-    def test_add_area_circle_triangle(self):
+    def test_add_area_triangle_triangle(self):
         c = Triangle(21, 30, 15)
         r = Triangle(3, 3, 2)
         assert c.add_area(r) == 149.06
+
+    def test_add_area_triangle_str(self):
+        c = Triangle(21, 30, 15)
+        r = "f"
+        assert c.add_area(r) is None
+
+    def test_add_area_triangle_int(self):
+        c = Triangle(21, 30, 15)
+        r = 1
+        assert c.add_area(r) is None

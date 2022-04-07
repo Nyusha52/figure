@@ -60,3 +60,13 @@ class TestSquare:
         c = Square(21)
         r = Triangle(3, 3, 2)
         assert c.add_area(r) == 443.83
+
+    def test_add_area_square_str(self):
+        c = Square(21)
+        r = "f"
+        assert c.add_area(r) is None
+
+    def test_add_area_square_int(self):
+        c = Square(21)
+        r = 1
+        assert c.add_area(r) is None

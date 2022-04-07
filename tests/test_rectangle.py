@@ -76,3 +76,13 @@ class TestRectangle:
         c = Rectangle(21, 30)
         r = Triangle(3, 3, 2)
         assert c.add_area(r) == 632.83
+
+    def test_add_area_rectangle_str(self):
+        c = Rectangle(21, 30)
+        r = "f"
+        assert c.add_area(r) is None
+
+    def test_add_area_rectangle_int(self):
+        c = Rectangle(21, 30)
+        r = 1
+        assert c.add_area(r) is None
